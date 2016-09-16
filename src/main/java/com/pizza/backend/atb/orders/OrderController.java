@@ -14,7 +14,7 @@ public class OrderController {
 	
 
 	@RequestMapping("/")
-	//todo: Remove test URL http://localhost:8080/
+	//todo: Remove test URL http://localhost:8081/
 	public List<Order> getAllOrders(){
 		
 		List<Order> orders = orderService.getAllOrders();
@@ -22,7 +22,7 @@ public class OrderController {
 		
 	}
 	@RequestMapping("/add/{userId}/{orderJSON}")
-	//todo: Remove test URL http://localhost:8080/add/nenadm/'JSON String goes here'
+	//todo: Remove test URL http://localhost:8081/add/nenadm/'JSON String goes here'
 	public Order add(@PathVariable("userId") String userId, 
 							 @PathVariable("orderJSON") String orderJSON){
 		
@@ -31,14 +31,14 @@ public class OrderController {
 		return order;
 	}
 	@RequestMapping("/getOrders/{userId}")
-	//todo: Remove test URL http://localhost:8080/getOrders/nenadm
+	//todo: Remove test URL http://localhost:8081/getOrders/nenadm
 	public List<Order> getOrders(@PathVariable("userId") String userId){
 		List<Order> orders = orderService.getOrders(userId);
 		System.out.println("Orders retreived:"+orders.toString());
 		return orders;
 	}
 	@RequestMapping("/getPrevOrder/{orderId}")
-	//todo: Remove test URL http://localhost:8080/getPrevOrder/4
+	//todo: Remove test URL http://localhost:8081/getPrevOrder/4
 	public Order getPrevOrder(@PathVariable("orderId") String orderId){
 		Order order = orderService.getPrevOrder(orderId);
 		System.out.println("Order found:"+order.toString());
