@@ -1,0 +1,10 @@
+---
+applications:
+- name: pizza-poc
+  memory: 512M
+  host: pizza-poc
+  domain: cfapps.io
+  services:
+  - datasource
+  env:
+    JAVA_OPTS : -Dspring.profiles.active=cloud
