@@ -1,11 +1,11 @@
 ---
 applications:
-- name: pizza-poc
+- name: sts-pizza-poc
   memory: 512M
-  host: pizza-poc
+  host: sts-pizza-poc
   domain: cfapps.io
   path: target/demo-0.0.1-SNAPSHOT.jar
   services:
-  - datasource
+  - olddatasource
   env:
     JAVA_OPTS : -Dspring.profiles.active=cloud
