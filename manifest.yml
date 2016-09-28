@@ -1,8 +1,8 @@
 ---
 applications:
-- name: sts-pizza-poc
+- name: sts-pizza-backend
   memory: 512M
-  host: sts-pizza-poc
+  host: sts-pizza-backend
   domain: cfapps.io
   path: target/demo-0.0.1-SNAPSHOT.jar
   services:

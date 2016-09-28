@@ -15,6 +15,7 @@ public class LocalDataSourceConfig {
 	@Bean
 	@ConfigurationProperties(prefix="spring.datasource")
 	public DataSource dataSource() {
+		System.out.println("---Local profile for data source running---");
 		return DataSourceBuilder.create().build();
 	}
 }

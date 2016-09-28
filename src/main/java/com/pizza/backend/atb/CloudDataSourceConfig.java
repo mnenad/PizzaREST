@@ -13,6 +13,7 @@ public class CloudDataSourceConfig extends AbstractCloudConfig {
 
     @Bean
     public DataSource dataSource() {
+    	System.out.println("---Cloud profile for data source running---");
         return connectionFactory().dataSource();
     }
 
